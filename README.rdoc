@@ -2,7 +2,7 @@
 
 Generate static pages with ease.
 
-Snow makes it easy to use a layout in <tt>app/views/layouts/</tt> for pages like <tt>public/404.html</tt> and <tt>public/500.html</tt>.
+Snow makes it easy to use a layout in <tt>app/views/layouts/</tt> for pages like <tt>public/404.html</tt> and <tt>public/500.html</tt>.  Think of it like HighVoltage[http://github.com/thoughtbot/high_voltage], but for static files that live in public.
 
 == Installation
 

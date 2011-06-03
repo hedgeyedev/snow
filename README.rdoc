@@ -14,7 +14,7 @@ To install:
 
 Or in your Gemfile:
 
-    gem 'snow', '= 0.1.0.alpha.1' # or newer version as appropriate
+    gem "snow", "~> 0.1.0.alpha.1" # or newer version as appropriate
 
 == Tutorial
 

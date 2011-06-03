@@ -6,13 +6,15 @@ Gem::Specification.new do |s|
   s.name        = "snow"
   s.version     = Snow::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["Benjamin Oakes"]
+  s.email       = ["boakes@hedgeye.com"]
+  s.homepage    = "http://github.com/hedgeyedev/snow"
+  s.summary     = %q{Generate static pages with ease, using a layout for public/404.html, etc}
+  s.description = s.summary
 
   s.rubyforge_project = "snow"
+
+  s.add_dependency('rails', '~> 3.0.0')
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

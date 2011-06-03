@@ -1,0 +1,36 @@
+= Snow
+
+Generate static pages with ease.
+
+Snow makes it easy to use a layout in <tt>app/views/layouts/</tt> for pages like <tt>public/404.html</tt> and <tt>public/500.html</tt>.
+
+== Installation
+
+Snow is currently in *alpha*.  Effectively, there's just a README right now, as we still need to extract some code from a project.
+
+To install:
+
+    gem install snow --pre
+
+Or in your Gemfile:
+
+    gem 'snow', '= 0.1.0.alpha.1' # or newer version as appropriate
+
+== Tutorial
+
+Snow adds the following <tt>rake</tt> tasks by default:
+
+    rake statics      # Render all statics to files
+    rake statics:404  # Render static 404 page with layout
+    rake statics:422  # Render static 422 page with layout
+    rake statics:500  # Render static 500 page with layout
+
+Snow uses actions in a controller named <tt>StaticsController</tt>.  Essentially, <tt>rake statics</tt> does this:
+
+    app/views/statics/not_found.html.erb      =>  public/404.html
+    app/views/statics/unprocessable.html.erb  =>  public/422.html
+    app/views/statics/server_error.html.erb   =>  public/500.html
+
+This is a one time rendering so that you don't have to resort to any strange ApplicationController/Rails changes just to easily have a layout for your statics.
+
+Did your layout change?  Just run <tt>rake statics</tt> and all the statics will be refreshed.
